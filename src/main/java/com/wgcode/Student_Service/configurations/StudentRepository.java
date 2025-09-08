@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.Optional;
 
-public interface StudentRepository extends JpaRepository {
+public interface StudentRepository extends JpaRepository<StudentDTO, Long> {
 
     @Query("SELECT s FROM Students s WHERE s.email = ?1")
     Optional<StudentDTO> retrieveAllStudentsByEmail(String email);
