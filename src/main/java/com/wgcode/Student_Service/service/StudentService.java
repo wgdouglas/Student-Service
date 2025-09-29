@@ -23,7 +23,7 @@ public class StudentService {
     public List<StudentDTO> retrieveAllStudents() {
         return studentRepository.findAll();
     }
-//
+    // my first attemp logic
 //    public Optional<StudentDTO> findStudentById(StudentDTO studentId){
 //        Optional<StudentDTO> findStudentsById = studentRepository.findById(studentId.getStudentId());
 //        if(findStudentsById.isEmpty()){
@@ -35,7 +35,6 @@ public class StudentService {
 //        if (classGraduatedYear == 5) {
 //            throw new RuntimeException("Student not found in database");
 //        }
-    // my first attemp logic
 //        return findStudentsById.map(student -> {
 //            ClassIndex studentStillEnrolled = new ClassIndex();
 //            studentStillEnrolled.setStudentEnrollmentYear(2025 - classEnrolledYear);
@@ -46,7 +45,6 @@ public class StudentService {
 //            }
 //        });
 //    }
-
 
     public Optional<StudentDTO> findStudentById(StudentDTO studentId){
         Optional<StudentDTO> foundStudentById = studentRepository.findById(studentId.getStudentId());
