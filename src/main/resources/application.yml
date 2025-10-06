@@ -16,3 +16,8 @@ server:
   error:
     include-message: always
 
+googleClassroom:
+  api:
+    endpoint: https://classroom.googleapis.com
+  credentials:
+    file-path: /secrets/google-credentials.json

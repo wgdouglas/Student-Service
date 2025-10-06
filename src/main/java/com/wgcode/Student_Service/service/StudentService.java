@@ -70,10 +70,11 @@ public class StudentService {
            throw new RuntimeException("Student not found in Database");
         }
 
-        if(findStudentsByEmail.isPresent()) {
-            throw new IllegalStateException("Student already exists in " +
-                    "the Database. Please try again with a different email");
-        }
+        //This is always returning true because the email is unique in the database
+//        if(findStudentsByEmail.isPresent()) {
+//            throw new IllegalStateException("Student already exists in " +
+//                    "the Database. Please try again with a different email");
+//        }
         studentRepository.save(student);
     }
 
