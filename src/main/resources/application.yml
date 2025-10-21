@@ -19,7 +19,4 @@ server:
 #    endpoint: https://classroom.googleapis.com
 #  credentials:
 #    file-path: /secrets/google-credentials.json
-#    oAuth2:
-#      client-id: 873262068173-1l0f9911oj93t0fq3p6vooteu55jdjq1.apps.googleusercontent.com
-#      client-secret: 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
 #  redirect-uri: http://localhost:8080/oauth2/callback
