@@ -2,6 +2,7 @@ package com.wgcode.Student_Service.controller;
 
 import com.wgcode.Student_Service.dto.StudentDTO;
 import com.wgcode.Student_Service.service.StudentService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +21,7 @@ public class StudentsController {
 
     private final StudentService studentService;
 
-    //    @Autowired
+        @Autowired
     public StudentsController(StudentService studentService) {
         this.studentService = studentService;
     }
@@ -30,10 +31,10 @@ public class StudentsController {
         return studentService.retrieveAllStudents();
     }
 
-    @GetMapping("findStudent/{studentId}")
-    public StudentDTO findStudent(@PathVariable("studentId") StudentDTO studentId) {
-        return studentService.findStudentById(studentId).orElse(null);
-    }
+//    @GetMapping("findStudent/{studentId}")
+//    public StudentDTO findStudent(@PathVariable("studentId") StudentDTO studentId) {
+//        return studentService.findStudentById(studentId).orElse(null);
+//    }
 
     @PostMapping("registerStudents")
     public void registerNewStudents(@RequestBody StudentDTO students) {

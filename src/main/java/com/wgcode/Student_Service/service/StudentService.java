@@ -46,21 +46,21 @@ public class StudentService {
 //        });
 //    }
 
-    public Optional<StudentDTO> findStudentById(StudentDTO studentId){
-        Optional<StudentDTO> foundStudentById = studentRepository.findById(studentId.getStudentId());
-        if(foundStudentById.isEmpty()) {
-            throw new RuntimeException("Student not found in database");
-        }
-        var currentYear = LocalDateTime.now().getYear();
-        var classIndex = new ClassIndex();
-        var enrollmentYear = classIndex.getStudentEnrollmentYear();
-        var yearsEnrolled = currentYear - enrollmentYear;
-        if (yearsEnrolled <=4){
-            return foundStudentById;
-        } else {
-            throw new RuntimeException("Student not found in database");
-            }
-        }
+//    public Optional<StudentDTO> findStudentById(StudentDTO studentId){
+//        Optional<StudentDTO> foundStudentById = studentRepository.findById(studentId.getStudentId());
+//        if(foundStudentById.isEmpty()) {
+//            throw new RuntimeException("Student not found in database");
+//        }
+//        var currentYear = LocalDateTime.now().getYear();
+//        var classIndex = new ClassIndex();
+//        var enrollmentYear = classIndex.getStudentEnrollmentYear();
+//        var yearsEnrolled = currentYear - enrollmentYear;
+//        if (yearsEnrolled <=4){
+//            return foundStudentById;
+//        } else {
+//            throw new RuntimeException("Student not found in database");
+//            }
+//        }
 
     public void registerStudents(StudentDTO student) {
         Optional<StudentDTO> findStudentsByEmail = studentRepository

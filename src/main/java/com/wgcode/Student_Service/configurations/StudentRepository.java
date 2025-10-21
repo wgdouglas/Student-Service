@@ -8,6 +8,6 @@ import java.util.Optional;
 
 public interface StudentRepository extends JpaRepository<StudentDTO, Long> {
 
-    @Query("SELECT s FROM Students s WHERE s.email = ?1")
+    @Query("SELECT s FROM StudentDTO s WHERE s.studentEmail = ?1")
     Optional<StudentDTO> retrieveAllStudentsByEmail(String email);
 }

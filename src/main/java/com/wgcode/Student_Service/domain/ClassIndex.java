@@ -21,6 +21,6 @@ public class ClassIndex {
         this.numberOfStudents = numberOfStudents;
     }
 
-    public ClassIndex() {
-    }
+//    public ClassIndex() {
+//    }
 }
